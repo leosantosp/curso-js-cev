@@ -1,6 +1,6 @@
 ### DOCUMENTAÇÃO
 
-Neste repositório do GitHub será inserido todo o conteúdo estudado e praticado no curso de JavaScript para iniciantes ministrado pelo Curso em Vídeo pelo Guanabara
+Neste repositório do GitHub será inserido todo o conteúdo estudado e praticado no curso de JavaScript para iniciantes ministrado pelo Curso em Vídeo com a didática do Prof° Guanabara
 
 O curso é dividido em 6 módulos. 
 
