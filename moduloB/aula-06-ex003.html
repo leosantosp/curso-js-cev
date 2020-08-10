@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Curso JavaScript - Módulo B - Aula 06 - Ex002</title>
+	<style>
+		body {
+			background-color: #5f5ff8;
+			color: #FFF;
+			font: normal 20pt Arial;
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+
+		/*------------ UTILIZANDO VARIÁVEIS COM NÚMEROS ------------------*/
+
+		var n1 = prompt('Digite um número: ')
+		var n2 = prompt('Digite outro número: ')
+		var soma = n1 + n2
+		alert(soma)
+
+		// Neste caso, o resultado exibido será a concatenação dos dois números. Ex: 4 e 2, vai exibir 42. Isso ocorre pq o tipo de dado recebido no prompt é do tipo 'string', assim como o 'confirm' é do tipo booleano.
+
+		/* Para isto, é necessário realizarmos as conversões de dados. No caso de números, temos três formatos de conversão: 
+		
+		Number.parseInt(n)     ou     parseInt(n)
+		Number.parseFloat(n)    ou    parseFloat(n)
+		Number(n)
+
+		*/
+
+		var soma1 = Number.parseInt(n1) + Number.parseInt(n2)
+		var soma1 = Number.parseFloat(n1) + Number.parseFloat(n2)
+		var soma1 = parseInt(n1) + parseInt(n2)
+		var soma1 = parseFloat(n1) + parseFloat(n2)
+		var soma1 = Number(n1) + Number(n2)
+
+		alert(soma1)
+
+		/* Neste caso, foi apenas um exercício de fixação, a maneira mais 'correta' e 'limpa' de se fazer, é convertê-lo, antes da variável recebê-lo. Segue exemplo: */
+
+		var n3 = Number(prompt('Digite um número: '))
+		var n4 = Number(prompt('Digite outro número: '))
+		var sub = n3 - n4
+		alert(sub)
+
+		// No exemplo acima, assim que o resultado é computado, o comando já realiza a conversão e a variável recebe o resultado. Sem haver a necessidade de convertê-los na hora da conta. Claro, existem casos e casos e dependendo do que você pretende fazer, talvez, seja necessário só converter na hora da conta. 
+
+
+
+
+		/*------------------------------------------------------------------------------------------*/
+
+
+
+
+		/*----------- CONVERSÃO PARA STRING -------------*/
+
+		alert('A subtração dos valores é: ' + String(sub))
+		alert('A subtração dos valores é: ' + sub.toString())
+		
+		String(n) 
+		n.toString()
+
+		// Mesma exemplificação da conversão para Number
+
+		/*------------------------------------------------------------------------------------------*/
+
+
+
+
+		/*--------- CHAMANDO UMA VARIÁVEL DENTRO DAS ASPAS -------------*/
+
+		// Durante o processo de aprendizado, é bem comum que o aluno insira coisas como
+		var s = 'JavaScript'
+		alert('Eu estou aprendendo s')
+
+		// Isso é totalmente normal e a gente já sabe que isso não está correto, afinal, dentro das aspas é subentendido pelo JS que tudo que há ali, é parte de uma string. No entanto, como fazer para uma variável aparecer em um contexto com string sem necessidade de ficar concatenando a todo momento? Nas versões mais atuais do JS, podemos realizar isso com a utilização das crases.
+
+		// Então a gente pode fazer algo como: 
+
+		var nome = 'Leonardo'
+		var idade = '21'
+		var linguagem = 'JavaScript'
+
+		alert(`Olá, meu nome é ${nome}, tenho ${idade} anos de idade e estou aprendendo ${linguagem}`)
+
+		/* Embora seja meio chato de fazer devido a necessidade de fazer as crases (que vamos combinar, é bem mais fácil fazer as aspas no teclado doq a crase). Utilizamos esse tipo de interpretação quando vamos exibir uma string que tem MUITAS variáveis para serem exibidas nela, então não precisamos fazer toda aquela lambança de concatenação. Assim, deixando bem mais limpo e agradável o nosso código */
+	
+
+		/*------------------------------------------------------------------------------------------*/
+		/*-------- DICAS DE OUTROS TIPOS DE CONVERSÕES DENTRO DO TIPO STRING DE DADOS ------------*/
+
+		var s3 = 'JavaScript'
+
+		s3.length // Neste caso, o comando irá exibir a quantidade de caracteres contém essa string
+		s3.toUpperCase() // Converterá todos os caracteres para 'MAIÚSCULAS'
+		s3.toLowerCase() // Converterá todos os caracteres para 'minúsculas'
+
+		
+	</script>
+</body>
+</html>

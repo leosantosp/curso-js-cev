@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Curso JavaScript - Módulo B - Aula 06 - Ex002</title>
+	<style>
+		body {
+			background-color: #5f5ff8;
+			color: #FFF;
+			font: normal 20pt Arial;
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+
+		/*-------- ARMAZENANDO DADOS DO PROMPT EM VARIÁVEL ----------*/
+
+		// Definimos uma variável nome que vai receber o resultado do prompt com a pergunta 'Qual é seu nome?'
+		var nome = window.prompt('Qual é seu nome?')
+
+		// Exibindo em um alert o valor armazenado na variável
+		alert("Olá "+nome+", seja bem-vindo!")
+
+		/*-------- EXIBINDO O VALOR EM OUTROS TIPOS DE COMANDOS -----------*/
+		var test1 = window.confirm('Você está gostando de JS?')
+
+		/* Clicar em 'OK' no confirm, é guardado como resposta true. O que dá a entender que a janela confirm é baseado em tipo de dado booleano, ou seja, true ou false. */
+		alert(test1)
+
+		// ANOTHER TEST
+		var test2 = window.confirm('Você está gostando de JS?')
+
+		if(test2 == true) {
+			alert('Continue assistindo as aulas')
+		} else {
+			alert('Procure outra linguagem para estudar')
+		}
+
+		// Neste teste, se você apertar em OK, ele irá exibir um alerta e se clicar em cancelar, exibirá outro alerta.
+		
+		/*------------ UTILIZANDO VARIÁVEIS COM NÚMEROS ------------------*/
+
+		var n1 = prompt('Digite um número: ')
+		var n2 = prompt('Digite outro número: ')
+
+
+	
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Curso JavaScript - Módulo B - Aula 06 - Ex002</title>
+	<style>
+		body {
+			background-color: #5f5ff8;
+			color: #FFF;
+			font: normal 20pt Arial;
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+
+		/*-------- FORMATANDO STRINGS ------------*/
+
+		variable.length // Neste caso, o comando irá exibir a quantidade de caracteres contém essa string
+		variable.toUpperCase() // Converterá todos os caracteres para 'MAIÚSCULAS'
+		variable.toLowerCase() // Converterá todos os caracteres para 'minúsculas'
+
+		//Segue os exemplos: 
+
+		var nome = prompt('Qual é o seu nome?')
+
+		document.writeln(`Seu nome tem ${nome.length} letras. <br>`)
+		document.writeln(`Seu nome em maiúsculas é ${nome.toUpperCase()}`)
+		document.writeln(`Seu nome em minúsculas é ${nome.toLowerCase()}`)
+
+
+		/*------------------- FORMATANDO NÚMEROS ------------------------*/
+
+		example.toFixed(2) // Vai ajustar um valor em uma variável para uma certa quantidade de casas decimais, no caso do exemplo: 2 casas decimais
+
+		var n1 = 1545.5
+		n1.toFixed(2) // O resultado exibido será 1545.50
+		
+		// Caso eu queira exibir vírgula em vez de ponto nesses números, é necessário utilizarmos o comando replace, que basicamente troca algo do conteúdo daquela variável por outro. No caso, colocamos no primeiro campo, o '.' que queremos tirar e ',' que queremos realocar no lugar. 
+
+		example.toFixed(2).replace('what-I-have', 'what-i-want-to-replace')
+
+		n1.toFixed(2).replace('.', ',')
+
+		/*----- COMANDO PARA ENSINAR CONVERSÃO DE MOEDA ----------*/
+
+		// Localize a string em PT-BR, o estilo é moeda, e a moeda utilizada é a BRL (brasileira)
+		// Não é pq necessariamente está em PT-BR que apenas a BRL vai funcionar, também podemos utilizar a USD e todas as outras moedas.
+
+		n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+		// É importante lembrar que no terminal node, a exibição ocorre tipo 1,545.50, mas fique tranquilo que no navegador, ele é exibido da maneira correta: 1.545,50
+
+		/* 
+		
+			ALGUNS TIPOS DE CÓDIGOS DE MOEDAS DE ACORDO COM A ISO 4217 
+
+			• BRL -> Brasil (Reais)
+			• USD -> Alguns países da america do norte (Dólar)
+			• JPY -> Japão (Iene)
+			• BOB -> Bolívia (Boliviano)
+			• CAD -> Canadá (Dólar Canadense)
+			• CNY -> China (Renminbi)
+			• EUR -> Países Europeus (Euro)
+			• GBP -> Reino Unido (Libra Esterlina)
+			• INR -> India (Rupia Indiana)
+			• KRW -> Coreia do Sul (Won sul-coreano)
+			• KPW -> Coreia do Norte (Won norte-coreano)
+		
+		*/
+
+		
+	</script>
+</body>
+</html>

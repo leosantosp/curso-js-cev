@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aula 06 - Revisão</title>
+</head>
+<body>
+
+	<script>
+		/*-- PEQUENO SISTEMA QUE RETORNA RESULTADOS DIFERENTES DEPENDENDO DA RESPOSTA NO CONFIRM --*/
+		// var nome = prompt('Qual é seu nome?')
+		// var idade = prompt('Qual a sua idade?')
+		// var trabalho = confirm('Você trabalha? OK para Sim e Cancelar para Não')
+		// var faculdade = confirm('Você faz faculdade? Tecle OK para Sim e Cancelar para Não')
+		
+		// if(faculdade == true && trabalho == true) {
+		// 	var curso = prompt('Qual curso você faz na faculdade?')
+		// 	var profissao = prompt('Qual sua profissão?')
+		// 	alert(`Olá ${nome}, você tem ${idade} anos de idade. Você trabalha como ${profissao} e cursa ${curso} na faculdade`)
+
+		// } 
+		
+		// else if(faculdade == true && trabalho == false) {
+		// 	var curso = prompt('Qual curso você faz na faculdade?')
+		// 	alert(`Olá ${nome}, você tem ${idade} anos de idade. Você cursa ${curso} na faculdade e não está trabalhando no momento`)
+		// } 
+		
+		// else if(faculdade == false && trabalho == true) {
+		// 	var profissao = prompt('Qual sua profissão?')
+		// 	alert(`Olá ${nome}, você tem ${idade} anos de idade. Você trabalha como ${profissao} e não faz faculdade.`)
+		// } 
+		
+		// else if(faculdade == false && trabalho == false) {
+		// 	alert(`Olá ${nome}, você tem ${idade} anos de idade. Não trabalha e nem faz faculdade`)
+
+		// 	if(idade >= 18) {
+		// 		alert('Devia arrumar ao menos um emprego')
+		// 	} else {
+		// 		alert('Você é ainda menor de idade, mas devia já ir pensando no que gostaria de fazer')
+		// 	}
+		// } else {
+		// 	alert('Você não preencheu todos os campos corretamente')
+		// }
+
+		/* SISTEMAS DE SOMA, SUBTRAÇÃO, MULTIPLICAÇÃO E DIVISÃO */
+
+		// alert('A partir de agora, você entrará no sistema de contas')
+
+		// var n1 = Number(prompt('Digite um número: '))
+		// var n2 = Number(prompt('Digite outro número: '))
+		// var n3 = Number(prompt('Outro número: '))
+		// var tipo = prompt("Que tipo de conta deseja realizar entre esses 3 números? <br> As opções são: soma, subtracao, multiplicacao, divisao e media. <br> Por favor, digite exatamente como mostra na tela")
+
+		// if(tipo == "soma") {
+
+		// 	var resultado = n1 + n2 + n3
+		// 	alert(`O resultado da soma entre ${n1} + ${n2} + ${n3} = ${resultado}`)
+
+		// } else if (tipo == "subtracao") {
+			
+		// 	var resultado = n1 - n2 - n3
+		// 	alert(`O resultado da subtração entre ${n1} - ${n2} - ${n3} = ${resultado}`)
+
+		// } else if (tipo == "multiplicacao") {
+
+		// 	var resultado = n1 * n2 * n3
+		// 	alert(`O resultado da multiplicação entre ${n1} * ${n2} * ${n3} = ${resultado}`)
+		
+		// } else if (tipo == "divisao") {
+			
+		// 	var resultado = (n1 / n2) / n3
+		// 	alert(`O resultado da divisão entre ( ${n1} / ${n2} ) / ${n3} = ${resultado.toFixed(2).replace('.', ',')}`)
+
+		// } else if (tipo == "media") {
+
+		// 	var resultado = (n1 + n2 + n3)/3
+		// 	alert(`A média entre ${n1} + ${n2} + ${n3} / 3 = ${resultado}`)
+		
+		// } else {
+		// 	alert('Você provavelmente digitou o tipo de conta diferente do mencionado no alerta ou não digitou um número. Por favor, verifique novamente se digitou corretamente')
+		// }
+
+
+		/* IMAGINANDO UM SISTEMA PARA REALIZAR EQUAÇÃO DE SEGUNDO GRAU PRA VOCÊ */
+
+		// alert('A partir de agora, você entrou no sistema de equações de segundo grau utilizando a fórmula de Baskhara, digite os valores de A, B e C e mostraremos o resultado +/- pra você')
+
+		// var a = Number(prompt('Digite aqui o valor de A'))
+		// var b = Number(prompt('Digite aqui o valor de B'))
+		// var c = Number(prompt('Digite aqui o valor de C'))
+
+		// var delta = Math.pow(b,2) - (4*a*c)
+
+		// var xpositivo = (-b + Math.sqrt(delta))/(2*a)
+		// var xnegativo = (-b - Math.sqrt(delta))/(2*a)
+
+		// alert(`O 'X' positivo é igual a ${xpositivo} e o 'X' negativo é igual a ${xnegativo}`)
+
+
+		/* BRINCANDO COM STRINGS */
+
+		// var nome = prompt('Qual é o seu nome?')
+
+		// document.write(`Seu nome em maiúsculas fica como ${nome.toUpperCase()} <br>`)
+		// document.write(`Seu nome em minúsculas fica como ${nome.toLowerCase()} <br>`)
+		// document.write(`${nome}, seu nome contém ${nome.length} caracteres`)
+
+
+		/* MEXENDO COM VALORES DINHEIRO */
+		
+		var nome = prompt('Digite o seu nome: ')
+		var cpf = Number(prompt('Digite o seu CPF'))
+		var conta = Number(prompt('Digite sua conta'))
+		var senha = Number(prompt('Digite a sua senha'))
+
+
+		if (nome == 'Leonardo' && cpf == 47635198831 && conta == 47320122 && senha == 190299) {
+			var dinheiro = 1600.5
+
+			document.write(`Seja bem-vindo ${nome} a sua conta corrente no Banco Inter <br>`)
+
+			document.write(`Saldo: ${dinheiro.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+		} else if (nome != 'Leonardo' && cpf != 47635198831 && conta != 47320122 && senha != 190299) {
+			document.write(`Dados incorretos! Tente novamente mais tarde!`)
+		}
+
+		
+
+
+
+
+		
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>
