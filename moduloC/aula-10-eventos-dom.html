@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aula 10 - Eventos DOM</title>
+	<style>
+		div#area {
+			font: normal 1.5em Arial;
+			background: rgb(42, 139, 42);
+			color: #FFF;
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+			text-align: center;
+		}
+
+		div#area2 {
+			font: normal 1.5em Arial;
+			text-align: center;
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+			color: #FFF;
+			background: cornflowerblue;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- ESTE É O PRIMEIRO EXEMPLO SOBRE CRIAÇÃO DE FUNÇÕES, UTILIZANDO O EXEMPLO DE EVENTOS DE MOUSE COM FUNÇÕES VIA HTML -->
+	<div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+		Interajaa...
+	</div>
+
+	<!-- Note que é possível criar funções diretamente via HTML, com o uso da propriedade on (que significa que o que virá a seguir é um evento) e o nome deste evento, então por exemplo, um evento de click, fica como on+click (onclick)_-->
+
+	<script>
+
+		function clicar() {
+			var area = document.getElementById('area')
+			area.innerText = 'Clicou!'
+			area.style.background = 'red'
+			// Ao clicar na div, o texto será mudado para Clicou
+		}
+
+		function entrar() {
+			var area = document.getElementById('area')
+			area.innerText = 'Entrou!'
+			area.style.background = 'orange'
+			// Ao passar o mouse dentro da div, o texto será mudado para Entrou!
+		}
+
+		function sair() {
+			var area = document.getElementById('area')
+			area.innerText = 'Saiu!'
+			area.style.background = 'green'
+			// Ao tirar o mouse de dentro da div, o texto será mudado para Saiu!
+		}
+	</script>
+
+
+	<!-- ESTE SEGUNDO EXEMPLO É DE FAZER ESSES EVENTOS VIA JAVASCRIPT -->
+
+	<!-- Neste segundo exemplo, note que toda a adição de eventos ocorre inteiramente via JavaScript, preservando um código HTML mais limpo. Isso se deve aos Listeners que são ouvidores, ou seja, eles vão prestar atenção naquele elemento para executar o evento especificado -->
+
+	<div id="area2">
+		Interajaa...
+	</div>
+
+	<script>
+		var area2 = document.getElementById('area2')
+		
+		area2.addEventListener('click', clicar2)
+		area2.addEventListener('mouseenter', entrar2)
+		area2.addEventListener('mouseout', sair2)
+
+		function clicar2() {
+			area2.innerText = 'Clicou!'
+			area2.style.background= 'red'
+		}
+
+		function entrar2() {
+			area2.innerText = 'Entrou!'
+			area2.style.background = 'black'
+		}
+
+		function sair2() {
+			area2.innerText = 'Saiu!'
+			area2.style.background = 'purple'
+		}
+	</script>
+</body>
+</html>

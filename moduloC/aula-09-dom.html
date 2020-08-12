@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aula 09 - Entendendo o DOM</title>
+	<style>
+		body {
+			background: rgb(68, 125, 199);
+			color: #FFF;
+			font: normal 1.5em Arial;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="titulo">Iniciando estudos com DOM</h1>
+	<p>Aqui vai o resultado</p>
+	<p>Aprendendo a usar o <strong name="forte">DOM</strong> em JavaScript</p>
+	<div id="container" class="container">Clique em mim</div>
+
+
+
+	<script>
+		// window.document.write(window.document.URL) -> URL atual da página
+		// window.document.write(window.navigator.AppName) -> Nome do atual navegador
+
+
+
+		// var p1 = document.getElementsByTagName('p')
+
+		/* Neste caso, eu vou selecionar todas as tags 'p' e atribuí-los a variável p1. No entanto, caso eu sinta necessidade de pegar uma tag em específico, eu posso especificar sua posição no documento através dos números, sendo 0 a primeira tag daquele tipo qeu aparece no documento e por aí vai. */
+
+		var p1 = document.getElementsByTagName('p')[0]
+		 window.document.write('Está escrito assim: ' + p1.innerText);
+
+
+		p1.style.color = 'red' //Este comando pode mudar a cor de estilo de algum elemento, após alguns testes notei que é possível a inserção de cores por escrita, por hexadecimal e rgb
+
+		var corpo = window.document.body // O body é atribuído a variável 'corpo'
+		corpo.style.background = 'black' // Aqui já ficou entendido que para mexer no style em JS, basta colocar variavel.style.OQueQueroMudar
+
+		var p2 = document.getElementsByTagName('p')[1]
+		
+		document.write(p2.innerText)
+		document.write(p2.innerHTML)
+
+		/* A DIFERENÇA ENTRE innerText e innerHTML 
+			O innerText, ele insere apenas o texto. Já o innerHTML insere não apenas o texto, mas as tags também. Então, por exemplo, se tivermos um link <a>, um <strong> ou até uma <img> dentro de um parágrafo, o innerText exibirá apenas o texto, enquanto o innerHTML irá exibir todo o conteúdo HTML daquele parágrafo.
+		*/
+
+		/*
+			window.alert(p2.innerText); 
+			No caso de um alerta, o melhor é utilizar apenas o innerText, já que caso utilizemos o HTML, ele irá exibir as tags em forma de texto no alerta
+		*/
+
+		// SELEÇÃO POR ID
+		var titulo = document.getElementById('titulo')
+		titulo.style.color = 'blue'
+
+		// SELEÇÃO POR NOME
+		var strong = document.getElementsByName('forte')
+		
+		// SELEÇÃO POR CLASSE
+		var div = document.getElementsByClassName('container')
+
+		// SELEÇÃO POR SELETOR
+		var d = window.document.querySelector('div#container')
+		d.style.background = 'blue'
+		d.innerText = 'Estou aguardando...'
+
+
+	</script>
+</body>
+</html>

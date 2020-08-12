@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculando valores</title>
+	<style>
+		body {
+			font: normal 18pt Arial
+		}
+		input {
+			font: normal 18pt Arial;
+			width: 150px;
+		}
+
+		#res {
+			margin-top: 25px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Calculando valores</h1>
+
+	<input type="number" name="txtn1" id="txtn1">
+	<input type="number" name="txtn2" id="txtn2"> <br><br>
+	
+	<input id="btnSoma" type="button" value="+">
+	<input id="btnSub" type="button" value="-">
+	<input id="btnMult" type="button" value="*">
+	<input id="btnDiv" type="button" value="/">
+
+
+	<div id="res">Resultado</div>
+
+	<script>
+		var btnSoma = document.getElementById('btnSoma')
+		var btnSub = document.getElementById('btnSub')
+		var btnMult = document.getElementById('btnMult')
+		var btnDiv = document.getElementById('btnDiv')
+
+		btnSoma.addEventListener('click', somar)
+		btnSub.addEventListener('click', subtrair)
+		btnMult.addEventListener('click', multiplicar)
+		btnDiv.addEventListener('click', dividir)
+
+		function somar() {
+			var tn1 = document.getElementById('txtn1')
+			var tn2 = document.querySelector('input#txtn2')
+			var res = document.getElementById('res')
+
+			var n1 = Number(tn1.value)
+			var n2 = Number(tn2.value)
+
+			var s = n1 + n2
+
+			res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+		}
+
+		function subtrair() {
+			var tn1 = document.getElementById('txtn1')
+			var tn2 = document.querySelector('input#txtn2')
+			var res = document.getElementById('res')
+
+			var n1 = Number(tn1.value)
+			var n2 = Number(tn2.value)
+
+			var s = n1 - n2
+
+			res.innerHTML = `A subtração entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+		}
+
+		function multiplicar() {
+			var tn1 = document.getElementById('txtn1')
+			var tn2 = document.querySelector('input#txtn2')
+			var res = document.getElementById('res')
+
+			var n1 = Number(tn1.value)
+			var n2 = Number(tn2.value)
+
+			var s = n1 * n2
+
+			res.innerHTML = `A multiplicação entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+		}
+
+		function dividir() {
+			var tn1 = document.getElementById('txtn1')
+			var tn2 = document.querySelector('input#txtn2')
+			var res = document.getElementById('res')
+
+			var n1 = Number(tn1.value)
+			var n2 = Number(tn2.value)
+
+			var s = n1 / n2
+
+			res.innerHTML = `A divisão entre ${n1} e ${n2} é igual a <strong>${s.toFixed(2)}</strong>`
+		}
+	</script>
+
+</body>
+</html>
