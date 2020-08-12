@@ -152,3 +152,19 @@ A primeira condição seja 'false' e a segunda seja 'false' -> como nenhuma das 
 3 - OPERADORES LÓGICOS
 ! && ||
 
+*- TERNÁRIO -*
+
+Os operadores ternários são presentados por '?' e ':', eles se chama ternário pois possuem 3 partes, três operandos. Exemplo:
+
+            teste            ?              true            :                false 
+      Teste lógico comum            caso seja verdadeiro              caso seja falso
+
+
+Ex:     var media = 8.0
+		media >= 7.0 ? 'Aprovado' : 'Reprovado'
+
+		var x = 8.0
+		var res = x % 2 == 0 ? 5 : 9
+			res = 5
+
+O primeiro valor depois do teste lógico sempre será caso seja true e o segundo sempre será caso seja false
