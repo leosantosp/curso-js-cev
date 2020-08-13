@@ -22,3 +22,18 @@ footer {
 	text-align: center;
 	font-style: italic;
 }
+
+#verifyButton {
+	width: 120px;
+	padding: 8px 0;
+	background-color: green;
+	border: none;
+	border-radius: 8px;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 1.1em;
+}
+
+#verifyButton:hover {
+	background-color: rgb(4, 83, 4)
+}
