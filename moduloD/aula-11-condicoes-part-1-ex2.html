@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PAÍS</title>
+</head>
+<body>
+	<h1>Em qual país você vive?</h1>
+
+	<input type="text" name="pais" id="pais">
+	<input id="verificar" type="button" value="Verificar">
+	<div id="res">
+	</div>
+	<script>
+		var pais = document.getElementById('pais');
+		var verify = document.querySelector('input#verificar');
+		var res = document.querySelector('div#res');
+		verify.addEventListener('click', verificar);
+
+		function verificar() {
+			var nac = pais.value;
+
+			if(nac == 'Brasil' || nac == 'brasil'){
+				res.innerHTMl = `<p>Você está vivendo atualmente no Brasil</p>`
+				res.innerHTML += '<p>Você é Brasileiro</p>';
+			} else {
+				res.innerHTML = `<p>Você está vivendo atualmente no(a) ${nac}</p>`
+				res.innerHTML += 'Você é estrangeiro';
+			}
+		}
+	</script>
+
+	
+</body>
+</html>
