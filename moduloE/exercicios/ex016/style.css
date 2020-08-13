@@ -1,0 +1,39 @@
+body {
+	background: rgb(107, 107, 241);
+	font: normal 15pt Arial;
+}
+
+header {
+	color: #FFF;
+	text-align: center;
+}
+
+section {
+	background: #FFF;
+	border-radius: 10px;
+	padding: 16px;
+	width: 500px;
+	margin: auto;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+}
+
+footer {
+	color: #FFF;
+	text-align: center;
+	font-style: italic;
+}
+
+input[type=number] {
+	width: 120px;
+	padding: 4px 0;
+}
+
+#countButton {
+	padding: 8px 0;
+	width: 120px;
+	background-color: rgb(26, 160, 26);
+	border: none;
+	border-radius: 8px;
+	color: #FFF;
+	font-size: 1.1em;
+}
